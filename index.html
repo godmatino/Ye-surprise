@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fade Message</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:url('background.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  backdrop-filter: blur(10px);
+  background:rgba(0,0,0,0.35);
+}
+
+.text-wrap{
+  position:relative;
+  text-align:center;
+  color:white;
+  opacity:0;
+  animation:fadeIn 2.2s ease forwards;
+}
+
+.main{
+  font-size:22px;
+  margin-bottom:6px;
+}
+
+.sub{
+  font-size:14px;
+  opacity:0.85;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(12px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+
+  <div class="text-wrap">
+    <div class="main">Hanoz khob nashodi 😉</div>
+    <div class="sub">Ye surprise kocholo💌</div>
+  </div>
+
+</body>
+</html>
